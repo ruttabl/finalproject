@@ -9,14 +9,14 @@ var shopamount = localStorage.getItem("shopamnt");
 var ucounter = document.getElementById("amnt").innerHTML = shopamount;
 function addNum() { 
     var counter = document.getElementById("amnt").innerHTML
-    var gum = parseInt(counter) + 1 * gcounter;
+    var gum = Number(counter) + 1 * gcounter;
     document.getElementById("amnt").innerHTML = gum;
-    localStorage.setItem("samnt", parseInt(document.getElementById("amnt").innerHTML));
+    localStorage.setItem("samnt", Number(document.getElementById("amnt").innerHTML));
 }
 var homie = document.getElementById("shopbtn");
 homie.addEventListener("click", saveNum);
     function saveNum(){
-        localStorage.setItem("samnt", parseInt(document.getElementById("amnt").innerHTML));
+        localStorage.setItem("samnt", Number(document.getElementById("amnt").innerHTML));
     }
     
 var button = document.getElementById("abutton");
@@ -37,7 +37,7 @@ function click() {
     bttn.click();
 }
 };
-setInterval("click()", parseInt(scaler));
+setInterval("click()", Number(scaler));
 BTN.addEventListener("click", autoCheck);
 function autoCheck(){
     if(auto = 0){
@@ -51,7 +51,7 @@ function autoCheck(){
 }
 window.addEventListener("onbeforeunload", save());
 function save() {
-    localStorage.setItem("samnt", parseInt(document.getElementById("amnt").innerHTML));
+    localStorage.setItem("samnt", Number(document.getElementById("amnt").innerHTML));
 }
 
 
