@@ -1,5 +1,6 @@
 var BTN = document.getElementById("gbutton");
 var ABTN = document.getElementById("abutton");
+var gcounter = localStorage.getItem("gpuamnt");
 var scaler = localStorage.getItem("uminer");
 var auto = localStorage.getItem("aminer");
 BTN.addEventListener("click", addNum);
@@ -8,7 +9,7 @@ var ucounter = document.getElementById("amnt").innerHTML = shopamount;
 function addNum() { 
     var counter = parseInt(document.getElementById("amnt").innerHTML)
     if (gcounter > 0){
-        var gcounter = localStorage.getItem("gpuamnt");
+        document.getElementById("gpuamnt").innerHTML = gcounter;
         var gum = parseInt(counter) + 1 * gcounter;
     }
     else {
@@ -17,6 +18,19 @@ function addNum() {
     document.getElementById("amnt").innerHTML = gum;
     localStorage.setItem("samnt", Number(document.getElementById("amnt").innerHTML));
 }
+// function addNum() { 
+//     var gcounter = localStorage.getItem("gpuamnt");
+//     var counter = parseInt(document.getElementById("amnt").innerHTML)
+//     if (Number(gcounter) > 0){
+        
+//         var gum = parseInt(counter) + 1 * Number(gcounter);
+//     }
+//     else {
+//         var gum = parseInt(counter) + 1;
+//     }
+//     document.getElementById("amnt").innerHTML = gum;
+//     localStorage.setItem("samnt", Number(document.getElementById("amnt").innerHTML));
+// }
 var homie = document.getElementById("shopbtn");
 homie.addEventListener("click", saveNum);
     function saveNum(){

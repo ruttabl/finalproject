@@ -27,7 +27,7 @@ var homie = document.getElementById("homebtn");
 homie.addEventListener("click", saveNum);
     function saveNum(){
         localStorage.setItem("shopamnt", Number(document.getElementById("hi").innerHTML));
-        localStorage.setItem("gpuamnt", Number(document.getElementById("ngpu").innerHTML));
+        localStorage.setItem("gpuamnt", document.getElementById("ngpu").value);
     }
 }
 var AM = document.getElementById("auto");
